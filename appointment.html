@@ -5,7 +5,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body><script>
+function validateAppointment() {
+    let name = document.querySelector('input[type="text"]').value;
+    let email = document.querySelector('input[type="email"]').value;
+    let date = document.querySelector('input[type="date"]').value;
+
+    if (name === "" || email === "" || date === "") {
+        alert("Please complete all appointment details.");
+        return false;
+    }
+
+    alert("Appointment request submitted successfully!");
+    return true;
+}
+</script>
 
 <nav>
     <a href="index.html">Home</a>
